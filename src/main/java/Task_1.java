@@ -20,8 +20,7 @@ public class Task_1 {
         int max = findMax(oddNumbers); //Максимальное значение
         System.out.println(max);
         double average = findAverage(oddNumbers); //Среднее значение
-        String roundAverage = String.format("%.2f",average); //Окгругляем среднее значение до двух знаков после запятой
-        System.out.println(roundAverage);
+        System.out.println(average);
     }
 
     public static ArrayList generateList(){
@@ -62,7 +61,7 @@ public class Task_1 {
             int i = iterator.next();
             sum = sum + i;
         }
-        double average = sum/list.size();
+        double average = Math.round((sum/list.size())*100.0)/100.0;
         return average;
     } //Ищем среднее значение
 
